@@ -1,61 +1,193 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Orchestra - Digital Transformation Agency
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Une application Laravel complète pour une agence de transformation digitale avec un panneau d'administration moderne.
 
-## About Laravel
+## 🚀 Fonctionnalités
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Site Public
+- **Page d'accueil** avec carousel dynamique
+- **Section Leadership** avec équipe de direction
+- **Blog/Press** avec articles et sidebar
+- **Our Values** avec valeurs d'entreprise
+- **Work** avec projets clients
+- **Our Agencies** avec agences
+- **Footer/Contact** avec informations de contact
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Panneau d'Administration
+- **Dashboard** avec statistiques en temps réel
+- **Gestion du Carousel** - Slides de la page d'accueil
+- **Gestion du Leadership** - Équipe de direction
+- **Gestion du Blog** - Articles et contenu
+- **Gestion des Valeurs** - Valeurs d'entreprise
+- **Gestion des Projets** - Réalisations clients
+- **Gestion des Agences** - Informations des agences
+- **Gestion des Contacts** - Informations de contact
+- **Gestion des Utilisateurs** - Utilisateurs et administrateurs
+- **Paramètres** - Configuration du système
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🛠️ Technologies Utilisées
 
-## Learning Laravel
+- **Laravel 11** - Framework PHP
+- **MySQL** - Base de données
+- **Blade** - Moteur de templates
+- **Bootstrap 5** - Framework CSS
+- **Font Awesome** - Icônes
+- **JavaScript** - Interactivité
+- **CSS3** - Animations et transitions
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 📦 Installation
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Prérequis
+- PHP 8.1+
+- Composer
+- MySQL
+- Node.js & NPM
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Étapes d'installation
 
-## Laravel Sponsors
+1. **Cloner le repository**
+```bash
+git clone https://github.com/joeldjebi/Orchestra.git
+cd Orchestra
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+2. **Installer les dépendances**
+```bash
+composer install
+npm install
+```
 
-### Premium Partners
+3. **Configuration de l'environnement**
+```bash
+cp .env.example .env
+php artisan key:generate
+```
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+4. **Configuration de la base de données**
+Modifier le fichier `.env` :
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=orchestra
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+```
 
-## Contributing
+5. **Exécuter les migrations et seeders**
+```bash
+php artisan migrate
+php artisan db:seed
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+6. **Compiler les assets**
+```bash
+npm run build
+```
 
-## Code of Conduct
+7. **Démarrer le serveur**
+```bash
+php artisan serve
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 👤 Comptes par défaut
 
-## Security Vulnerabilities
+### Administrateur
+- **Email** : `admin@orchestra.com`
+- **Mot de passe** : `password`
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 📁 Structure du Projet
 
-## License
+```
+orchestra/
+├── app/
+│   ├── Http/Controllers/
+│   │   ├── Admin/          # Contrôleurs admin
+│   │   └── Auth/           # Authentification
+│   └── Models/             # Modèles Eloquent
+├── database/
+│   ├── migrations/         # Migrations
+│   └── seeders/           # Seeders
+├── resources/
+│   └── views/
+│       ├── admin/          # Vues admin
+│       ├── auth/           # Vues d'authentification
+│       └── layouts/        # Layouts
+├── public/
+│   └── images/            # Images uploadées
+└── routes/
+    └── web.php            # Routes web
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 🎨 Fonctionnalités du Design
+
+- **Design responsive** pour tous les appareils
+- **Animations CSS** fluides et modernes
+- **Interface admin** intuitive et professionnelle
+- **Carousel interactif** avec navigation
+- **Menu hamburger** fixe et responsive
+- **Dashboard** avec statistiques en temps réel
+
+## 🔧 Gestion du Contenu
+
+### Carousel
+- Ajout/modification/suppression de slides
+- Gestion des images et textes
+- Ordre d'affichage personnalisable
+- Activation/désactivation
+
+### Leadership
+- Gestion des membres de l'équipe
+- Photos et informations personnelles
+- Ordre d'affichage
+- Statut actif/inactif
+
+### Blog
+- Création d'articles avec images
+- Layout alterné (titre gauche/droite)
+- Contenu structuré en paragraphes
+- Sidebar personnalisable
+
+### Autres Sections
+- **Valeurs** : Définition des valeurs d'entreprise
+- **Projets** : Portfolio des réalisations
+- **Agences** : Informations des agences
+- **Contact** : Configuration du footer
+
+## 🚀 Déploiement
+
+### Production
+1. Configurer les variables d'environnement
+2. Optimiser l'application : `php artisan optimize`
+3. Compiler les assets : `npm run production`
+4. Configurer le serveur web (Apache/Nginx)
+
+### Variables d'environnement importantes
+```env
+APP_URL=https://your-domain.com
+DB_CONNECTION=mysql
+MAIL_MAILER=smtp
+```
+
+## 📝 Licence
+
+Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
+
+## 🤝 Contribution
+
+Les contributions sont les bienvenues ! N'hésitez pas à :
+1. Fork le projet
+2. Créer une branche pour votre fonctionnalité
+3. Commit vos changements
+4. Push vers la branche
+5. Ouvrir une Pull Request
+
+## 📞 Support
+
+Pour toute question ou support, contactez :
+- **Email** : contact@orchestra.com
+- **GitHub** : [joeldjebi/Orchestra](https://github.com/joeldjebi/Orchestra)
+
+---
+
+**Orchestra** - Transformant l'Afrique par la technologie digitale 🚀
